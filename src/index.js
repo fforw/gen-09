@@ -1,12 +1,9 @@
 import domready from "domready"
 import SimplexNoise from "simplex-noise"
 import "./style.css"
-import weightedRandom from "./weightedRandom";
 import Color from "./Color";
 
-const PHI = (1 + Math.sqrt(5)) / 2;
 const TAU = Math.PI * 2;
-const DEG2RAD_FACTOR = TAU / 360;
 
 const config = {
     width: 0,
@@ -24,19 +21,12 @@ let canvas;
 domready(
     () => {
 
-        const rounding = 16;
-        const padding = 20;
 
         canvas = document.getElementById("screen");
         ctx = canvas.getContext("2d");
 
         const width = (window.innerWidth) | 0;
         const height = (window.innerHeight) | 0;
-
-        const chooseCenter = weightedRandom([
-            1, () => width
-        ])
-
 
         config.width = width;
         config.height = height;
