@@ -1,3 +1,3 @@
-# Simple Starter
+# gen-09
 
-Simple JS build starter for simple, client-only demos.
+Truchet tiling generator
